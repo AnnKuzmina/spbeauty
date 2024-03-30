@@ -5,6 +5,7 @@ import IconOnlyButton from '../../../../Components/IconOnlyButton';
 const WrapperInput = styled.div`
     position:relative;
     width: 216px;
+    height: 34px;
 `;
 
 const Input = styled.input`
@@ -13,6 +14,8 @@ const Input = styled.input`
     border: solid #E2E8F0 1px;
     background-color: #F8FAFC;
     color: #94A3B8;
+    padding: 8px, 16px, 8px, 16px;
+    gap: 16px;
     width: 100%;
     &:hover {
         background: #F8FAFC;
