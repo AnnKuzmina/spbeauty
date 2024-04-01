@@ -11,10 +11,14 @@ const Input = styled.input`
     }
 `;
 
+const TitleStyled = styled.div`
+    color: #94A3B8;
+`;
+
 function TitledTextInput({title, def}) {
     const Title = title === undefined ? 
-        (<div></div>) : 
-        (<div className='caption'>{title}</div>);
+    (<div></div>) : 
+    (<TitleStyled className='caption'>{title}</TitleStyled>);
     return (
         <div className='d-flex flex-column gap-2'>
             <div className='caption'>

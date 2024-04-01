@@ -15,22 +15,26 @@ const Select = styled.select`
     }
 `;
 
+const TitleStyled = styled.div`
+    color: #94A3B8;
+`;
+
 function TitledSelector({title, options}) {
     const Title = title === undefined ? 
-        (<div></div>) : 
-        (<div className='caption'>{title}</div>);
-    return (
-        <div className='d-flex flex-column gap-2'>
-                {Title}
-            <Select className='p-2'>
-                {options.map(optionName => {
-                    return (
-                        <option key={optionName}>{optionName}</option>
-                    );
-                })}
-            </Select>
-        </div>
-    );
+    (<div></div>) : 
+    (<TitleStyled className='caption'>{title}</TitleStyled>);
+return (
+    <div className='d-flex flex-column gap-2'>
+        {Title}
+        <Select className='p-2'>
+            {options.map(optionName => {
+                return (
+                    <option key={optionName}>{optionName}</option>
+                );
+            })}
+        </Select>
+    </div>
+);
 }
 
 export default TitledSelector;
