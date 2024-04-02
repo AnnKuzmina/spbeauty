@@ -1,5 +1,6 @@
 import SecondaryButton from "../../../../../Components/SecondaryButton";
-import ListElement from "./ListElement"
+import ListElement from "./ListElement";
+import styled from 'styled-components';
 
 function Addresses() {
 
@@ -8,8 +9,16 @@ const ButPosition = {
     left: '0'
 };
 
+const Address = styled.div`
+border-radius: 24px;
+border: solid #E2E8F0 1px;
+min-width: 453px;
+min-height: 420px;
+padding: 24px;
+`;
+
     return (
-        <div className='d-flex flex-column justify-content-between'>
+        <Address className='d-flex flex-column justify-content-between'>
         <div className='d-flex flex-column gap-2 mt-4 justify-content-between'>
             <div className='title'>Адреса заведений</div>
             <div className='d-inline-flex flex-column gap-3'>
@@ -22,7 +31,7 @@ const ButPosition = {
             </div>
                 </div>
                 <SecondaryButton style={ButPosition}>Добавить филиал</SecondaryButton>
-        </div>
+        </Address>
     );
 }
 
