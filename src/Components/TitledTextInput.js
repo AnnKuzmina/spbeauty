@@ -6,6 +6,7 @@ const Input = styled.input`
     border: solid #E2E8F0 1px;
     background-color: #F8FAFC;
     color: #0F172A;
+    padding: 8px 16px 8px 16px;
     &:hover {
         opacity: 0.8;
     }
@@ -24,7 +25,7 @@ function TitledTextInput({title, def}) {
             <div className='caption'>
                 {Title}
             </div>
-            <Input className='p-2' defaultValue={def} ></Input>
+            <Input className='text-rg'defaultValue={def} ></Input>
         </div>
     );
 }
